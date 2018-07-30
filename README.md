@@ -1,9 +1,9 @@
 # Fil Rouge "Multipage Website"
 
-- Repository : `Multipage-Website-in-php`
-- Team : `In the group of 2 persons`
+- **Repository**: `Multipage-Website-in-php`
+- **Team** : `In the group of 2 persons`
        
-- Duration : `7 Days`
+- **Duration** : `7 Days`
 
 - **Done by**  
   - [Marie Louise Ogdoc](https://github.com/OGlou7)
