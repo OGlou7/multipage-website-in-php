@@ -207,7 +207,6 @@ La permanence est à votre disposition du lundi au jeudi, de 9:00 à 16 h.
 
 L’association est située Chaussée de Gand 1434 à 1082 Bruxelles (Berchem Sainte-Agathe)
 
-
 Si vous souhaitez nous rendre visite :
 
 En voiture, en venant de la ville, prendre à droite au feu avant le shopping center BASILIX - suivre la route du square et tourner à gauche vers le parking Basilix mais prendre ruelle à droite - traverser le chemin de fer et prendre la première à gauche. Après 100m au carrefour, vous êtes en face du bâtiment (Manufast - Partena)

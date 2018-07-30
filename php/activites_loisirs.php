@@ -1151,7 +1151,6 @@ Afin de voir si votre chaise roulante rentre dans le véhicule, voici les dimens
 Pour de plus amples informations, contactez Cindy Bertijn à l’adresse voiture@abpasbl.be ou au 02/421.69.65
 
 
-
 <!-- AVIRA : projet d’autopartage lancé par l’asbl Taxistop -->
 AVIRA : projet d'autopartage lancé par l'asbl Taxistop
 Dans le cadre de son projet de voiture partagée, l’ABP est devenue membre d’AVIRA et bénéficie des conseils et du support de l’asbl Taxistop (initiatrice du projet AVIRA).
