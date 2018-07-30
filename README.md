@@ -18,7 +18,7 @@
 
 ## About the Project 
 
-This project will helps us to learn how to realise a project in real situations, but will not be given to a any client. It is just an exercise from [BeCode](https://github.com/becodeorg/lovelace-2/tree/master/Projects/multipage-website-in-php)
+This project will helps us to learn how to realise a project in real situations, but will not be given to a any client. It is just an exercise from [BeCode](https://github.com/becodeorg/)
 For this, we have to refresh an existing [website](http://www.abpasbl.be/-AMV-asbl-Bruxelles-), with several pages to separate the content and that the visitors to the website can send an email via a contact form with a small photo.
 
 ## Client
@@ -42,11 +42,15 @@ We had at our disposal the [briefing](https://github.com/becodeorg/Johnson2/tree
 
 - `*1st step*`
 
-- `*2ndt step*`
+
+- `*2nd step*`
+
 
 - `*3rd step*`
 
+
 - `*4th step*`
+
 
 - `*5th step*`
 
@@ -58,7 +62,7 @@ We had at our disposal the [briefing](https://github.com/becodeorg/Johnson2/tree
 * 
 * 
 
-##  What we have learned from this project
+##  New skills acquired from this project
 * 
 * 
 * 
@@ -66,6 +70,7 @@ We had at our disposal the [briefing](https://github.com/becodeorg/Johnson2/tree
 
 
 ## Lighthouse Test
+
 
 
 # Final resultat
