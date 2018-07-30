@@ -1,3 +1,5 @@
+![working](http://www.usaclimi.it/Uploads/Documenti/work-in-progress.jpg)
+
 # Fil Rouge "Multipage Website"
 
 - **Repository**: `Multipage-Website-in-php`
