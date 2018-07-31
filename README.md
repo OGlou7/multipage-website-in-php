@@ -38,6 +38,11 @@ We had at our disposal the [briefing](https://github.com/becodeorg/Johnson2/tree
 
 ## Visualisation of project's idea
 
+**Web Mockup**
+![Mockup](images/WebPageDraft.png)
+
+**Contact Form Mockup**
+![Mockup](images/contactForm.png)
 
 
 ## Workflow
