@@ -4,21 +4,21 @@
 
 - **Repository**: `Multipage-Website-in-php`
 - **Team** : `In the group of 2 persons`
-       
+
 - **Duration** : `7 Days`
 
 - **Done by**  
   - [Marie Louise Ogdoc](https://github.com/OGlou7)
   - [Mariane Niwemfura](https://github.com/MarianeNiwe)
 
-- **When?** 
+- **When?**
         - From 30th July 2018 to 7th August 2018.
 
-- **Where?** 
+- **Where?**
         - A project done while in the training at [Becode](https://github.com/becodeorg/)
 
 
-## About the Project 
+## About the Project
 
 This project will helps us to learn how to realise a project in real situations, but will not be given to a any client. It is just an exercise from [BeCode](https://github.com/becodeorg/)
 For this, we have to refresh an existing [website](http://www.abpasbl.be/-AMV-asbl-Bruxelles-), with several pages to separate the content and that the visitors to the website can send an email via a contact form with a small photo.
@@ -64,16 +64,16 @@ We had at our disposal the [briefing](https://github.com/becodeorg/Johnson2/tree
 
 ## Problem encountered
 
-* 
-* 
-* 
-* 
+*
+*
+*
+*
 
 ##  New skills acquired from this project
-* 
-* 
-* 
-* 
+*
+*
+*
+*
 
 
 ## Lighthouse Test
