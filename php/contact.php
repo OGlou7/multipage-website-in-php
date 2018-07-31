@@ -1,6 +1,40 @@
 <?php
+  if(isset($_POST["button"])){
+   @$gender = $_POST["gender"];
+   @$prenom = $_POST["prenom"];
+   @$nom = $_POST["nom"];
+   @$objet = $_POST["objet"];
+   @$message = $_POST['message'];
+   @$document = $_POST["document"];
+   @$format = $_POST['format'];
+  }
+
+//SANITIZE
+  $prenom = $_POST['prenom'];
+  $san_pren = filter_var($prenom, FILTER_SANITIZE_STRING);
+
+  $nom = $_POST['nom'];
+  $san_nom = filter_var($nom, FILTER_SANITIZE_STRING);
+
+  $message = $_POST['prenom'];
+  $san_mess = filter_var($message, FILTER_SANITIZE_STRING);
 
 
+
+
+
+      // envoi d'une image via cette classe externe php upload
+
+
+      // la fonction mail() de php étant trop basique, utilise une class externe pour mail
+
+
+      // toujours pour l'envoi de l'email, utilise un serveur SMTP gratuit comme gmail (utilisez votre propre compte)
+
+
+      // Validation :
+      // limiter l'upload uniquement aux formats d'images les plus courants (jpg, jpeg, png, gif)
+      // obliger le minimum pour pouvoir répondre : email + message
 
  ?>
 
@@ -14,6 +48,60 @@
      <title></title>
    </head>
    <body>
+     <!-- FORMULAIRE  -->
+    <form class="" action="contact.php" method="post">
+    <fieldset>
+      <legend>CONTACT</legend>
+      <input type="radio" name="gender" value="monsieur">Monsieur
+      <input type="radio" name="gender" value="madame">Madame<br><br>
+      Nom: <input type="text" name="nom"> <br><br>
+      Prenom: <input type="text" name="prenom"><br><br>
+      Objet: <select name="objet" size="1">
+        <option value="information">Information</option>
+        <option value="benevolat">Benevolat</option>
+        <option value="donation">Donation</option>
+        <option value="autre">Autre</option>
+      </select><br><br>
+      Message: <textarea name="message" rows="5" cols="40"></textarea><br><br>
+      Documents: <input type="file" name="document"><br><br>
+      Format de réponse souhaité <input type="radio" name="format" value="html">HTML
+      <input type="radio" name="format" value="texte">Texte<br><br>
+      <button type="submit" name="button">Contactez-nous</button> <br>
+
+    </fieldset>
+    </form>
+
+
+
+       <!-- envoi d'une image via cette classe externe php upload -->
+
+      <!-- la fonction mail() de php étant trop basique, utilise une class externe pour mail -->
+
+      <!-- toujours pour l'envoi de l'email, utilise un serveur SMTP gratuit comme gmail (utilisez votre propre compte) -->
+
+
+      <!-- Validation :
+      limiter l'upload uniquement aux formats d'images les plus courants (jpg, jpeg, png, gif)
+      obliger le minimum pour pouvoir répondre : email + message -->
+
+
+
+     </form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                                             <!-- DIVERS -->
           Infos utiles
           Cette section regroupe des informations utiles pour les personnes handicapées.
