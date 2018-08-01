@@ -64,13 +64,13 @@ We had at our disposal the [briefing](https://github.com/becodeorg/Johnson2/tree
 
 ## Problem encountered
 
-*
-*
+* August 1st 2018 ABP desactivate their website
+* Missing some info + img for our website
 *
 *
 
 ##  New skills acquired from this project
-*
+* More Creative
 *
 *
 *
