@@ -470,5 +470,20 @@ A noter que cette mesure, adoptée par le Gouvernement en décembre 2012, s’ap
 
 <!-- SUIVEZ-NOUS -->
 
+
+<!-- SPONSORS -->
+<!-- https://www.cera.be/
+http://www.wallonie.be/
+http://www.federation-wallonie-bruxelles.be/
+https://www.access-i.be/ -->
+
+
+Association Belge des Paralysés a.s.b.l.
+Chaussée de Gand 1434 1082 - Berchem Ste-Agathe - Belgique
+Tél. : 02 421 69 65
+E-mail : info@abpasbl.be
+BE48 7755 9201 1027
+
+
    </body>
  </html>
