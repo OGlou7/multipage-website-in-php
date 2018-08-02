@@ -39,9 +39,9 @@ We had at our disposal the [briefing](https://github.com/becodeorg/Johnson2/tree
 ## Visualisation of project's idea
 
 **Web Mockup**
-![Mockup](images/WebPageDraft.png)
+![Mockup](php/img/WebPageDraft.png)
 
-![Mockup](images/contactForm.png)
+![Mockup](php/img/contactForm.png)
 **Contact Form Mockup**
 
 
