@@ -1,15 +1,9 @@
 <?php
-    if(isset($_POST["button"])){
-     @$gender = $_POST["gender"];
-     @$prenom = $_POST["prenom"];
-     @$nom = $_POST["nom"];
-     @$objet = $_POST["objet"];
-     @$message = $_POST['message'];
-     @$document = $_POST["document"];
-     @$format = $_POST['format'];
-     @$email = $_POST ['email'];
-    }
 
+error_reporting(E_ALL);
+   ini_set('display_errors', 1);
+   $button_submit = $_POST['button-submit'];
+  if($_POST['button']){
     $errors = array();
     //SANITIZE
     $prenom = $_POST['prenom'];
@@ -27,8 +21,7 @@
     $email = $_POST['email'];
     $san_email = filter_var($email, FILTER_SANITIZE_EMAIL);
     echo $email."<br>";
-
-
+  }
     //VALIDATION
     if (false === filter_var($prenom, FILTER_VALIDATE_STRING)) {
         $errors['prenom'] =  "Veuillez indiquer votre prenom.";
