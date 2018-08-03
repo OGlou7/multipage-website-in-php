@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Association Belge Paralysées</title>
+    <title>Association Belge des Paralysés</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -129,10 +129,10 @@
                 <h2 class="section-heading mb-4">
                   <span class="section-heading-upper">Nous avons besion de VOUS!</span>
                 </h2>
-                <p>Les activités mensuelles et les camps de vacances reposent sur l’aide bénévoles des personnes responsables et des aidants mais également de l'aide financielle. 
+                <p>Les activités mensuelles et les camps de vacances reposent sur l’aide bénévole des personnes responsables et des aidants mais également sur l'aide financielle. 
                 Ces jeunes et moins jeunes apportent leur aide aux personnes handicapées et leur permettent de vivre des moments de détente et de rencontres, ainsi que des activités qui sortent parfois de l’ordinaire !
                 Vous aussi vous pouvez participer aux activités de l’ABP en tant que bénévole et nous soutenir financiellement.
-                Pour soutenir nos activités contactez-nous en remplissant ce formulaire pour plus de details.
+                Pour soutenir nos activités ou pour une autre question nous concernant, contactez-nous en remplissant ce formulaire pour plus de details.
               </p>
                 
                   
@@ -145,7 +145,7 @@
 
     <footer class="footer text-faded text-center py-5">
       <div class="container">
-        <p class="m-0 small">Copyright &copy; 2018 - Fait par <a target="_blank" href="https://github.com/OGlou7">Marie Louse</a> & <a target="_blank" href="https://github.com/MarianeNiwe">Mariane</a> @ <a target="_blank" href="https://becode.org"> Formation BeCode </a></p>
+        <p class="m-0 small">Copyright &copy; 2018 - Fait par <a target="_blank" href="https://github.com/OGlou7">Marie Louise</a> & <a target="_blank" href="https://github.com/MarianeNiwe">Mariane</a> @ <a target="_blank" href="https://becode.org"> BeCode </a></p>
       </div>
     </footer>
 
