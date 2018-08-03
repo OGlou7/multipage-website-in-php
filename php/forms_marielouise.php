@@ -41,10 +41,6 @@ include "test.php";
 
       <!-- envoi d'une image via cette classe externe php upload -->
 
-     <!-- la fonction mail() de php étant trop basique, utilise une class externe pour mail -->
-
-     <!-- toujours pour l'envoi de l'email, utilise un serveur SMTP gratuit comme gmail (utilisez votre propre compte) -->
-
 
      <!-- Validation :
      limiter l'upload uniquement aux formats d'images les plus courants (jpg, jpeg, png, gif)

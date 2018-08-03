@@ -1,7 +1,11 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+require '../vendor/autoload.php';
 
-error_reporting(E_ALL);
-   ini_set('display_errors', 1);
+$mail = new PHPMailer;
+
+  error_reporting(E_ALL);
+  ini_set('display_errors', 1);
 
   if(isset($_POST['button'])){
     $errors = array();
@@ -22,7 +26,7 @@ error_reporting(E_ALL);
     $san_email = filter_var($email, FILTER_SANITIZE_EMAIL);
     echo $email."<br>";
 
-    //VALIDATION
+    // VALIDATION
     if ($san_pren === false) {
         $errors['prenom'] =  "Veuillez indiquer votre prenom.";
         }
@@ -30,17 +34,17 @@ error_reporting(E_ALL);
         $errors['nom'] =  "Veuillez indiquer votre nom.";
         }
     if ($san_mess === false) {
-    $errors['message'] =  "Veuillez indiquer votre message.";
-      }
-      else {
-        $mail->Body=$san_mess;
-      }
+      $errors['message'] =  "Veuillez indiquer votre message.";
+    }
+    else {
+      $mail->Body=$san_mess;
+    }
     if ($san_email === false) {
-    $errors['email'] =  "Veuillez indiquer votre email.";
-      }
-      else {
-        $mail->setFrom=$san_email;
-      }
+      $errors['email'] =  "Veuillez indiquer votre email.";
+    }
+    else {
+      $mail->setFrom=$san_email;
+    }
 
       // EXECUTION
       if (count($errors)> 0){
@@ -48,26 +52,26 @@ error_reporting(E_ALL);
       	print_r($errors);
       	exit;
       }
+
       // UPLOAD
 
       $handle = new upload($_FILES['document']);
       if ($handle->uploaded) {
-        //extension if
-
-        $handle->process('../images');
-        if ($handle->processed) {
-          echo 'image resized';
-          $handle->clean();
-        } else {
-          echo 'error : ' . $handle->error;
+        if ($handle->file_src_name_ext === 'png' || $handle->file_src_name_ext === 'jpg' ||$handle->file_src_name_ext === 'jpeg' || $handle->file_src_name_ext === 'gif') {
+          $handle->process('../images');
+          if ($handle->processed) {
+            echo 'image resized';
+            $handle->clean();
+          }
+          else {
+            echo 'error : ' . $handle->error;
+          }
         }
       }
 
 
-    //SMTP MAIL
-    use PHPMailer\PHPMailer\PHPMailer;
-    require '../vendor/autoload.php';
-    $mail = new PHPMailer;
+    // SMTP MAIL
+
     $mail->isSMTP();
     $mail->SMTPDebug = 2;
     $mail->Host = 'smtp.gmail.com';
@@ -86,24 +90,12 @@ error_reporting(E_ALL);
     $mail->addAddress('mlouiseogdoc@gmail.com', 'MLouise Ogdoc');
     //Set the subject line
     $mail->Subject = 'PHPMailer GMail SMTP test';
-    //Read an HTML message body from an external file, convert referenced images to embedded,
-    //convert HTML into a basic plain-text alternative body
-    //Replace the plain text body with one created manually
-    //Attach an image file
+
     //send the message, check for errors
     if (!$mail->send()) {
       echo "Mailer Error: " . $mail->ErrorInfo;
     } else {
       echo "Message sent!";
     }
-    function save_mail($mail)
-    {
-    //You can change 'Sent Mail' to any other folder or tag
-    $path = "{imap.gmail.com:993/imap/ssl}[Gmail]/Sent Mail";
-    //Tell your server to open an IMAP connection using the same username and password as you used for SMTP
-    $imapStream = imap_open($path, $mail->Username, $mail->Password);
-    $result = imap_append($imapStream, $path, $mail->getSentMIMEMessage());
-    imap_close($imapStream);
-    return $result;
-    }
+  }
 ?>
