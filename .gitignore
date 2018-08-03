@@ -1,0 +1,4 @@
+<?php>
+//Password to use for SMTP authentication
+  $mail->Password = "motdepassebecode";
+?>

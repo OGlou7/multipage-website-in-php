@@ -70,7 +70,7 @@ We had at our disposal the [briefing](https://github.com/becodeorg/Johnson2/tree
 *
 
 ##  New skills acquired from this project
-* More Creative
+*
 *
 *
 *
@@ -81,5 +81,3 @@ We had at our disposal the [briefing](https://github.com/becodeorg/Johnson2/tree
 
 
 # Final resultat
-
-

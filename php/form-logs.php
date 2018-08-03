@@ -81,7 +81,7 @@ $mail = new PHPMailer;
     $mail->SMTPAuth = true;
     //Username to use for SMTP authentication - use full email address for gmail
     $mail->Username = "becodetest@gmail.com";
-    include '.gitignore';
+    include ".gitignore";
     //Set who the message is to be sent from
     $mail->setFrom('becodetest@gmail.com', 'becodetest bxl');
     //Set an alternative reply-to address
@@ -113,4 +113,4 @@ $mail = new PHPMailer;
   file_put_contents("fichier.txt",$add, FILE_APPEND);
 
 }
- ?>
+?>
