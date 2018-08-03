@@ -5,7 +5,7 @@
  */
 body {
   font-family: 'Lora';
-  background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("../img/bg.jpg");
+  background: url("../img/bg.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -151,7 +151,7 @@ p {
   position: relative;
   padding: 3rem;
   margin: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.85);
+  /* background-color: rgba(255, 255, 255, 0.85); */
 }
 
 .cta .cta-inner:before {
@@ -162,7 +162,7 @@ p {
   bottom: -0.5rem;
   left: -0.5rem;
   right: -0.5rem;
-  border: 0.25rem solid rgba(255, 255, 255, 0.85);
+  /* border: 0.25rem solid rgba(255, 255, 255, 0.85); */
 }
 
 @media (min-width: 992px) {

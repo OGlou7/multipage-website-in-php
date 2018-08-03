@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ABP</title>
+    <title>Association Belge Paralysées</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,13 +21,15 @@
     <!-- Custom styles for this template -->
     <link href="css/business-casual.min.css" rel="stylesheet">
     <link href="css/business-casual.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
   </head>
 
   <body>
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/logo_abp.png" alt="logo">
+      <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/abp-logo.png" alt="logo">
     </h1>
 
     <!-- Navigation -->
@@ -119,19 +121,21 @@
 
     <section class="page-section about-heading">
       <div class="container">
-        <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/about.jpg" alt="">
+        <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/help.jpg" alt="">
         <div class="about-heading-content">
           <div class="row">
             <div class="col-xl-9 col-lg-10 mx-auto">
               <div class="bg-faded rounded p-5">
                 <h2 class="section-heading mb-4">
-                  <span class="section-heading-upper">Strong Coffee, Strong Roots</span>
-                  <span class="section-heading-lower">About Our Cafe</span>
+                  <span class="section-heading-upper">Nous avons besion de VOUS!</span>
                 </h2>
-                <p>Founded in 1987 by the Hernandez brothers, our establishment has been serving up rich coffee sourced from artisan farmers in various regions of South and Central America. We are dedicated to travelling the world, finding the best coffee, and bringing back to you here in our cafe.</p>
-                <p class="mb-0">We guarantee that you will fall in
-                  <em>lust</em>
-                  with our decadent blends the moment you walk inside until you finish your last sip. Join us for your daily routine, an outing with friends, or simply just to enjoy some alone time.</p>
+                <p>Les activités mensuelles et les camps de vacances reposent sur l’aide bénévoles des personnes responsables et des aidants mais également de l'aide financielle. 
+                Ces jeunes et moins jeunes apportent leur aide aux personnes handicapées et leur permettent de vivre des moments de détente et de rencontres, ainsi que des activités qui sortent parfois de l’ordinaire !
+                Vous aussi vous pouvez participer aux activités de l’ABP en tant que bénévole et nous soutenir financiellement.
+                Pour soutenir nos activités contactez-nous en remplissant ce formulaire pour plus de details.
+              </p>
+                
+                  
               </div>
             </div>
           </div>

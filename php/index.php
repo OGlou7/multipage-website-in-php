@@ -10,7 +10,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>ABP</title>
+    <title>Association Belge Paralysées</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -22,13 +22,15 @@
     <!-- Custom styles for this template -->
     <link href="css/business-casual.min.css" rel="stylesheet">
     <link href="css/business-casual.css" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
   </head>
 
   <body>
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/logo_abp.png" alt="logo">
+      <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/abp-logo.png" alt="logo">
     </h1>
 
     <!-- Navigation -->
