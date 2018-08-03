@@ -97,5 +97,22 @@ $mail = new PHPMailer;
     } else {
       echo "Message sent!";
     }
+    // //>>>READ FICHIER.TXT <<<
+    // $monfichier = file_get_contents('fichier.txt');
+    //   // var_dump($monfichier);
+    //   echo $monfichier;
+    //
+    // $monfichier .= '';
+    // // >>>>>>>>>ADD TEXT<<<<<<<<<<<<<
+    // $add = "test add atom";
+    // file_put_contents("fichier.txt",$monfichier);
+    // // <<<<<REPLACE FICHIER>>>>>>>
+    // // OU
+    // file_put_contents("fichier.txt",$add, FILE_APPEND);
+    // // <<<<<<< ADD in fichier>>>>
+    //
+    // fclose($monfichier);
   }
+
+
 ?>
