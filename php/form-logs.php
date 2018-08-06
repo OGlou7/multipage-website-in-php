@@ -28,6 +28,7 @@ $mail = new PHPMailer;
 
 
     // VALIDATION
+
     if ($san_pren === false) {
         $errors['prenom'] =  "Veuillez indiquer votre prenom.";
         }
@@ -56,10 +57,10 @@ $mail = new PHPMailer;
 
       // UPLOAD
 
-      $handle = new upload($_FILES['filedoc']);
+      $handle = new upload($_FILES['image_field']);
       if ($handle->uploaded) {
         if ($handle->file_src_name_ext === 'png' || $handle->file_src_name_ext === 'jpg' ||$handle->file_src_name_ext === 'jpeg' || $handle->file_src_name_ext === 'gif') {
-          $handle->process('../images');
+          $handle->process('./images');
           if ($handle->processed) {
             echo 'image resized';
             $handle->clean();
@@ -69,7 +70,6 @@ $mail = new PHPMailer;
           }
         }
       }
-
 
     // SMTP MAIL
 
@@ -81,7 +81,7 @@ $mail = new PHPMailer;
     $mail->SMTPAuth = true;
     //Username to use for SMTP authentication - use full email address for gmail
     $mail->Username = "becodetest@gmail.com";
-    include ".gitignore";
+    include "password.php";
     //Set who the message is to be sent from
     $mail->setFrom('becodetest@gmail.com', 'becodetest bxl');
     //Set an alternative reply-to address

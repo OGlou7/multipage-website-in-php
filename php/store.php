@@ -33,37 +33,12 @@ include "form-logs.php";
 
   <body>
 
-    <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/abp-logo.png" alt="logo">
-    </h1>
+    <!-- header and navigation -->
+    <?php
+      include ("header.php");
+    ?>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item active px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="index.php">Accueil
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="about.php">Qui sommes nous?</a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="products.php">Activités et Loisirs</a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="store.php">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    <!-- end header and navigation -->
 
     <section class="page-section cta">
       <div class="container">
@@ -71,7 +46,7 @@ include "form-logs.php";
           <div class="col-xl-9 mx-auto">
             <div class=" text-center rounded" id="forms">
               <!-- FORMULAIRE  -->
-             <form class="" action="store.php" method="post">
+             <form class="" action="store.php" method="post" enctype="multipart/form-data">
              <fieldset>
                <legend><strong>CONTACT</strong></legend>
                <input type="radio" name="gender" value="monsieur"><strong>Monsieur</strong>
@@ -85,7 +60,7 @@ include "form-logs.php";
                  <option value="autre"><strong>Autre</strong></option>
                </select><br><br>
                <strong>Message:</strong><textarea class="form-control" id="textarea" name="message" placeholder="message"></textarea><br><br>
-               <strong>Documents:</strong><br><input id="filebutton" name="filedoc" class="input-file" type="file" size="32"><br><br>
+               <strong>Documents:</strong><br><input id="filebutton" name="image_field" class="input-file" type="file" size="32"><br><br>
                <strong>Format de réponse souhaité </strong><input type="radio" name="format" value="html"><strong>HTML</strong>
                <input type="radio" name="format" value="texte"><strong>Texte</strong><br><br>
                <strong>E-mail: </strong><input id="textinput" name="email" type="text" placeholder="adresse email" class="form-control input-md">
@@ -116,7 +91,6 @@ include "form-logs.php";
                 Pour soutenir nos activités ou pour une autre question nous concernant, contactez-nous en remplissant ce formulaire pour plus de details.
               </p>
 
-
               </div>
             </div>
           </div>
@@ -124,11 +98,13 @@ include "form-logs.php";
       </div>
     </section>
 
-    <footer class="footer text-faded text-center py-5">
-      <div class="container">
-        <p class="m-0 small">Copyright &copy; 2018 - Fait par <a target="_blank" href="https://github.com/OGlou7">Marie Louise</a> & <a target="_blank" href="https://github.com/MarianeNiwe">Mariane</a> @ <a target="_blank" href="https://becode.org"> BeCode </a></p>
-      </div>
-    </footer>
+
+        <!-- footer -->
+        <?php
+        include ("footer.php");
+        ?>
+        <!-- end footer -->
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
