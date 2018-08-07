@@ -18,10 +18,14 @@ $mail = new PHPMailer;
     $nom = $_POST['nom'];
     $san_nom = filter_var($nom, FILTER_SANITIZE_STRING);
 
+    $objet = $_POST['objet'];
+    $san_obj = filter_var($objet, FILTER_SANITIZE_STRING);
 
     $message = $_POST['message'];
     $san_mess = filter_var($message, FILTER_SANITIZE_STRING);
 
+    $format = $_POST['format'];
+    $san_form = filter_var($format, FILTER_SANITIZE_STRING);
 
     $email = $_POST['email'];
     $san_email = filter_var($email, FILTER_SANITIZE_EMAIL);
