@@ -113,4 +113,27 @@ $mail = new PHPMailer;
   file_put_contents("fichier.txt",$add, FILE_APPEND);
 
 }
+
+  //MENTION TO USER
+  $file = file_get_contents('./logs.txt', true);
+  $file = rtrim(trim($file), ',');
+  $file = '[' . $file . ']';
+  $logs = json_decode($file, true);
+  var_dump($logs);
+  foreach ($logs as $key => $value) {
+    echo '<pre>';
+    echo $logs[$key]['date'];
+    echo '<br>';
+    echo $logs[$key]['heure'];
+    echo '<br>';
+    echo $logs[$key]['nom'];
+    echo '<br>';
+    echo $logs[$key]['prenom'];
+    echo '<br>';
+    echo $logs[$key]['email'];
+    echo '<br>';
+    echo $logs[$key]['format'];
+    echo '</pre>';
+  }
+
 ?>
