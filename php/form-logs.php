@@ -14,18 +14,15 @@ $mail = new PHPMailer;
     $prenom = $_POST['prenom'];
     $san_pren = filter_var($prenom, FILTER_SANITIZE_STRING);
 
-
     $nom = $_POST['nom'];
     $san_nom = filter_var($nom, FILTER_SANITIZE_STRING);
 
-    $objet = $_POST['objet'];
-    $san_obj = filter_var($objet, FILTER_SANITIZE_STRING);
+    @$objet = $_POST['objet'];
 
     $message = $_POST['message'];
     $san_mess = filter_var($message, FILTER_SANITIZE_STRING);
 
-    $format = $_POST['format'];
-    $san_form = filter_var($format, FILTER_SANITIZE_STRING);
+    @$format = $_POST['format'];
 
     $email = $_POST['email'];
     $san_email = filter_var($email, FILTER_SANITIZE_EMAIL);
@@ -102,10 +99,12 @@ $mail = new PHPMailer;
       echo "Message sent!";
     }
 
+    // MESSAGE HTML or TEXT
+  $msg_txt = $message;
+  $msg_html = "<html><head></head><body>" .$message. "</body></html>";
+
   //>>>READ FICHIER.TXT <<<
   $monfichier = file_get_contents('fichier.txt');
-    // var_dump($monfichier);
-    echo $monfichier;
 
     // >>>>>>>>>ADD TEXT<<<<<<<<<<<<<
   $monfichier .= 'add test log atom';
@@ -116,8 +115,6 @@ $mail = new PHPMailer;
     // <<<<<<< ADD in fichier>>>>
   file_put_contents("fichier.txt",$add, FILE_APPEND);
 
-}
-
   //MENTION TO USER
   $file = file_get_contents('./logs.txt', true);
   $file = rtrim(trim($file), ',');
@@ -126,7 +123,7 @@ $mail = new PHPMailer;
   var_dump($logs);
   foreach ($logs as $key => $value) {
     echo '<pre>';
-    echo $logs[$key]['date'];
+    echo $logs[$key][date('l d/m/y')];
     echo '<br>';
     echo $logs[$key]['heure'];
     echo '<br>';
@@ -139,5 +136,11 @@ $mail = new PHPMailer;
     echo $logs[$key]['format'];
     echo '</pre>';
   }
+
+
+}
+
+
+
 
 ?>
