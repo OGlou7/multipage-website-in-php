@@ -32,38 +32,12 @@ include "form-logs.php";
   </head>
 
   <body>
-
-    <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/abp-logo.png" alt="logo">
-    </h1>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item active px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="index.php">Accueil
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="about.php">Qui sommes nous?</a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="products.php">Activités et Loisirs</a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="store.php">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+   
+    <!-- header and navigation -->
+    <?php
+      include("header.php");
+    ?>
+    <!-- end header and navigation -->
 
     <section class="page-section cta">
       <div class="container">
@@ -124,11 +98,11 @@ include "form-logs.php";
       </div>
     </section>
 
-    <footer class="footer text-faded text-center py-5">
-      <div class="container">
-        <p class="m-0 small">Copyright &copy; 2018 - Fait par <a target="_blank" href="https://github.com/OGlou7">Marie Louise</a> & <a target="_blank" href="https://github.com/MarianeNiwe">Mariane</a> @ <a target="_blank" href="https://becode.org"> BeCode </a></p>
-      </div>
-    </footer>
+    <!-- footer -->
+    <?php
+      include ("footer.php");
+    ?>
+    <!-- end footer -->
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -138,7 +112,7 @@ include "form-logs.php";
 
   <!-- Script to highlight the active date in the hours list -->
   <script>
-    $('.list-hours li').eq(new Date().getDay()).addClass('today');
+    // $('.list-hours li').eq(new Date().getDay()).addClass('today');
   </script>
 
 </html>
