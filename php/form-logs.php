@@ -27,35 +27,35 @@ $mail = new PHPMailer;
     $email = $_POST['email'];
     $san_email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
-
     // VALIDATION
 
-    if ($san_pren === false) {
+    if ($san_pren === false || $prenom == '') {
         $errors['prenom'] =  "Veuillez indiquer votre prenom.";
-        }
-    if ($san_nom === false) {
+      }else {
+      $errors['prenom'] = "";
+      }
+    if ($san_nom === false || $nom == '') {
         $errors['nom'] =  "Veuillez indiquer votre nom.";
-        }
-    if ($san_mess === false) {
+      }else {
+      $errors['nom'] = "";
+      }
+    if ($san_mess === false || $message == '') {
       $errors['message'] =  "Veuillez indiquer votre message.";
-    }
-    else {
+      }
+      else {
+      $errors['message'] = "";
       $mail->Body=$san_mess;
     }
-    if ($san_email === false) {
+    if ($san_email === false || $email == '') {
       $errors['email'] =  "Veuillez indiquer votre email.";
     }
     else {
+      $errors['email'] = "";
       $mail->setFrom=$san_email;
     }
 
       // EXECUTION
-      if (count($errors)> 0){
-          echo 'Erreur!';
-          echo $email;
-          print_r($errors);
-          exit;
-      }
+
 
     // SMTP MAIL
 

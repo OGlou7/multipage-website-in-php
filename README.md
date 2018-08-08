@@ -33,13 +33,13 @@ The objective of this challenge is to give us the opportunity to use our new kno
 And here come steps to follow:
 - Use of **DRY** method
 - Separate `php` from `html`
-- Use of `.gitignore` file 
+- Use of `.gitignore` file
 - Contact page has to contain a form that will:
     * Allow user to choose their gender
     * Ask for user's name, last name and email
     * Allow user to write a message
     * Allow user to upload a jpg, gif or png
-    * Allow user to choose between *html* and *txt* 
+    * Allow user to choose between *html* and *txt*
 - Uploading will be done with *php upload* class
 - Email will be managed with *phpmailer* or another similar class
 - Form will be sanitized, validated, executed and will provide feedback
@@ -71,8 +71,8 @@ We met up the 1st day for a half day to figure out how to work on this project a
 ## Problems encountered
 
 * August 1st 2018,the original website was desactivated and we couldn't get some information we needed for our new project.
-*
-*
+* Working Remotly
+* 
 
 ##  New skills acquired from this project
 
