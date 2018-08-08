@@ -1,5 +1,6 @@
 <?php
 include "form-logs.php";
+
  ?>
 <!-- le contenu de la page Contact -->
 <!DOCTYPE html>

@@ -1,5 +1,4 @@
 <?php
-
 use PHPMailer\PHPMailer\PHPMailer;
 require '../vendor/autoload.php';
 
@@ -13,19 +12,19 @@ $mail = new PHPMailer;
     //SANITIZE
     $prenom = $_POST['prenom'];
     $san_pren = filter_var($prenom, FILTER_SANITIZE_STRING);
-
+    echo $prenom."<br>";
 
     $nom = $_POST['nom'];
     $san_nom = filter_var($nom, FILTER_SANITIZE_STRING);
-
+    echo $nom."<br>";
 
     $message = $_POST['message'];
     $san_mess = filter_var($message, FILTER_SANITIZE_STRING);
-
+    echo $message."<br>";
 
     $email = $_POST['email'];
     $san_email = filter_var($email, FILTER_SANITIZE_EMAIL);
-
+    echo $email."<br>";
 
     // VALIDATION
     if ($san_pren === false) {
@@ -56,7 +55,7 @@ $mail = new PHPMailer;
 
       // UPLOAD
 
-      $handle = new upload($_FILES['filedoc']);
+      $handle = new upload($_FILES['document']);
       if ($handle->uploaded) {
         if ($handle->file_src_name_ext === 'png' || $handle->file_src_name_ext === 'jpg' ||$handle->file_src_name_ext === 'jpeg' || $handle->file_src_name_ext === 'gif') {
           $handle->process('../images');
@@ -74,14 +73,15 @@ $mail = new PHPMailer;
     // SMTP MAIL
 
     $mail->isSMTP();
-    $mail->SMTPDebug = 0;
+    $mail->SMTPDebug = 2;
     $mail->Host = 'smtp.gmail.com';
     $mail->Port = 587;
     $mail->SMTPSecure = 'tls';
     $mail->SMTPAuth = true;
     //Username to use for SMTP authentication - use full email address for gmail
     $mail->Username = "becodetest@gmail.com";
-    include '.gitignore';
+    //Password to use for SMTP authentication
+    $mail->Password = "motdepassebecode";
     //Set who the message is to be sent from
     $mail->setFrom('becodetest@gmail.com', 'becodetest bxl');
     //Set an alternative reply-to address
@@ -93,24 +93,26 @@ $mail = new PHPMailer;
 
     //send the message, check for errors
     if (!$mail->send()) {
-      echo "Mailer Error: ";
+      echo "Mailer Error: " . $mail->ErrorInfo;
     } else {
       echo "Message sent!";
     }
+    // //>>>READ FICHIER.TXT <<<
+    // $monfichier = file_get_contents('fichier.txt');
+    //   // var_dump($monfichier);
+    //   echo $monfichier;
+    //
+    // $monfichier .= '';
+    // // >>>>>>>>>ADD TEXT<<<<<<<<<<<<<
+    // $add = "test add atom";
+    // file_put_contents("fichier.txt",$monfichier);
+    // // <<<<<REPLACE FICHIER>>>>>>>
+    // // OU
+    // file_put_contents("fichier.txt",$add, FILE_APPEND);
+    // // <<<<<<< ADD in fichier>>>>
+    //
+    // fclose($monfichier);
+  }
 
-  //>>>READ FICHIER.TXT <<<
-  $monfichier = file_get_contents('fichier.txt');
-    // var_dump($monfichier);
-    echo $monfichier;
 
-    // >>>>>>>>>ADD TEXT<<<<<<<<<<<<<
-  $monfichier .= 'add test log atom';
-  $add = "test add log";
-    // <<<<<REPLACE FICHIER>>>>>>>
-  file_put_contents("fichier.txt",$monfichier);
-  // OU
-    // <<<<<<< ADD in fichier>>>>
-  file_put_contents("fichier.txt",$add, FILE_APPEND);
-
-}
- ?>
+?>
