@@ -14,20 +14,22 @@ $mail = new PHPMailer;
     $prenom = $_POST['prenom'];
     $san_pren = filter_var($prenom, FILTER_SANITIZE_STRING);
 
-
     $nom = $_POST['nom'];
     $san_nom = filter_var($nom, FILTER_SANITIZE_STRING);
 
+    @$objet = $_POST['objet'];
 
     $message = $_POST['message'];
     $san_mess = filter_var($message, FILTER_SANITIZE_STRING);
 
+    @$format = $_POST['format'];
 
     $email = $_POST['email'];
     $san_email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
 
     // VALIDATION
+
     if ($san_pren === false) {
         $errors['prenom'] =  "Veuillez indiquer votre prenom.";
         }
@@ -49,27 +51,11 @@ $mail = new PHPMailer;
 
       // EXECUTION
       if (count($errors)> 0){
-      	echo 'Erreurs!';
-      	print_r($errors);
-      	exit;
+          echo 'Erreur!';
+          echo $email;
+          print_r($errors);
+          exit;
       }
-
-      // UPLOAD
-
-      $handle = new upload($_FILES['filedoc']);
-      if ($handle->uploaded) {
-        if ($handle->file_src_name_ext === 'png' || $handle->file_src_name_ext === 'jpg' ||$handle->file_src_name_ext === 'jpeg' || $handle->file_src_name_ext === 'gif') {
-          $handle->process('../images');
-          if ($handle->processed) {
-            echo 'image resized';
-            $handle->clean();
-          }
-          else {
-            echo 'error : ' . $handle->error;
-          }
-        }
-      }
-
 
     // SMTP MAIL
 
@@ -81,7 +67,7 @@ $mail = new PHPMailer;
     $mail->SMTPAuth = true;
     //Username to use for SMTP authentication - use full email address for gmail
     $mail->Username = "becodetest@gmail.com";
-    include '.gitignore';
+    include "password.php";
     //Set who the message is to be sent from
     $mail->setFrom('becodetest@gmail.com', 'becodetest bxl');
     //Set an alternative reply-to address
@@ -98,10 +84,30 @@ $mail = new PHPMailer;
       echo "Message sent!";
     }
 
+
+    // UPLOAD
+
+    $handle = new upload($_FILES['image_field']);
+    if ($handle->uploaded) {
+      if ($handle->file_src_name_ext === 'png' || $handle->file_src_name_ext === 'jpg' ||$handle->file_src_name_ext === 'jpeg' || $handle->file_src_name_ext === 'gif') {
+        $handle->process('./images');
+        if ($handle->processed) {
+          echo 'image resized';
+          $handle->clean();
+        }
+        else {
+          echo 'error : ' . $handle->error;
+        }
+      }
+    }
+
+
+    // MESSAGE HTML or TEXT
+  $msg_txt = $message;
+  $msg_html = "<html><head></head><body>" .$message. "</body></html>";
+
   //>>>READ FICHIER.TXT <<<
   $monfichier = file_get_contents('fichier.txt');
-    // var_dump($monfichier);
-    echo $monfichier;
 
     // >>>>>>>>>ADD TEXT<<<<<<<<<<<<<
   $monfichier .= 'add test log atom';
@@ -112,5 +118,32 @@ $mail = new PHPMailer;
     // <<<<<<< ADD in fichier>>>>
   file_put_contents("fichier.txt",$add, FILE_APPEND);
 
+  //MENTION TO USER
+  $file = file_get_contents('./logs.txt', true);
+  $file = rtrim(trim($file), ',');
+  $file = '[' . $file . ']';
+  $logs = json_decode($file, true);
+  var_dump($logs);
+  foreach ($logs as $key => $value) {
+    echo '<pre>';
+    echo $logs[$key][date('l d/m/y')];
+    echo '<br>';
+    echo $logs[$key]['heure'];
+    echo '<br>';
+    echo $logs[$key]['nom'];
+    echo '<br>';
+    echo $logs[$key]['prenom'];
+    echo '<br>';
+    echo $logs[$key]['email'];
+    echo '<br>';
+    echo $logs[$key]['format'];
+    echo '</pre>';
+  }
+
+
 }
- ?>
+
+
+
+
+?>

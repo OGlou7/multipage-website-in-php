@@ -75,6 +75,7 @@ We met up the 1st day for a half day to figure out how to work on this project a
 *
 
 ##  New skills acquired from this project
+
 * More Creative
 * Learn remote work and use all tools to make a good communication
 * How to use `include()`function in order to DRY and php classes
@@ -82,10 +83,9 @@ We met up the 1st day for a half day to figure out how to work on this project a
 * The use of `.gitignore` file
 * How to make your website compatible with the RGPD/Cookies.
 
+
 ## Lighthouse Test
 
 
 
 # Final resultat
-
-
