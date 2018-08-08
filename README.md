@@ -12,7 +12,7 @@
   - [Mariane Niwemfura](https://github.com/MarianeNiwe)
 
 - **When?**
-        - From 30th July 2018 to 7th August 2018.
+        - From 30th July 2018 to 10th August 2018.
 
 - **Where?**
         - A project done while in the training at [Becode](https://github.com/becodeorg/)
@@ -31,10 +31,10 @@ For this, we have to refresh an existing [website](http://www.abpasbl.be/-AMV-as
 
 The objective of this challenge is to give us the opportunity to use our new knowledge in PHP in a realistic scenario. It is therefore more important that each member of our team achieves her learning objectives than to succeed in the project.
 And here come steps to follow:
-- Use *DRY* coding
-- Separate *php* from *html*
-- Use `.gitignore` file 
-- One page will contain a contact form that will:
+- Use of **DRY** method
+- Separate `php` from `html`
+- Use of `.gitignore` file 
+- Contact page has to contain a form that will:
     * Allow user to choose their gender
     * Ask for user's name, last name and email
     * Allow user to write a message
@@ -54,12 +54,15 @@ We had at our disposal the [briefing](https://github.com/becodeorg/Johnson2/tree
 
 
 ## Visualisation of project's idea
-####Web Mockup
+
+### Web Mockup
 ![Mockup](php/img/WebPageDraft.png)
-####Contact Form Mockup
+
+### Contact Form Mockup
 ![Mockup](php/img/contactForm.png)
-####UML flowchart for contact form
-![Form](php/img/form diagram.jpg)
+
+### UML flowchart for contact form
+![Form](php/img/form(1)-Page-1.png)
 
 
 ## Workflow
@@ -67,8 +70,7 @@ We met up the 1st day for a half day to figure out how to work on this project a
 
 ## Problems encountered
 
-* August 1st 2018 ABP desactivate their website
-* Missing some info + img for our website
+* August 1st 2018,the original website was desactivated and we couldn't get some information we needed for our new project.
 *
 *
 
