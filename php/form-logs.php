@@ -51,25 +51,10 @@ $mail = new PHPMailer;
 
       // EXECUTION
       if (count($errors)> 0){
-      	echo 'Erreurs!';
-      	print_r($errors);
-      	exit;
-      }
-
-      // UPLOAD
-
-      $handle = new upload($_FILES['image_field']);
-      if ($handle->uploaded) {
-        if ($handle->file_src_name_ext === 'png' || $handle->file_src_name_ext === 'jpg' ||$handle->file_src_name_ext === 'jpeg' || $handle->file_src_name_ext === 'gif') {
-          $handle->process('./images');
-          if ($handle->processed) {
-            echo 'image resized';
-            $handle->clean();
-          }
-          else {
-            echo 'error : ' . $handle->error;
-          }
-        }
+          echo 'Erreur!';
+          echo $email;
+          print_r($errors);
+          exit;
       }
 
     // SMTP MAIL
@@ -98,6 +83,24 @@ $mail = new PHPMailer;
     } else {
       echo "Message sent!";
     }
+
+
+    // UPLOAD
+
+    $handle = new upload($_FILES['image_field']);
+    if ($handle->uploaded) {
+      if ($handle->file_src_name_ext === 'png' || $handle->file_src_name_ext === 'jpg' ||$handle->file_src_name_ext === 'jpeg' || $handle->file_src_name_ext === 'gif') {
+        $handle->process('./images');
+        if ($handle->processed) {
+          echo 'image resized';
+          $handle->clean();
+        }
+        else {
+          echo 'error : ' . $handle->error;
+        }
+      }
+    }
+
 
     // MESSAGE HTML or TEXT
   $msg_txt = $message;
