@@ -12,6 +12,7 @@ include "test.php";
   </head>
   <body>
     <!-- FORMULAIRE  -->
+
    <form class="" action="forms_marielouise.php" method="post">
    <fieldset>
      <legend>CONTACT</legend>
@@ -33,9 +34,9 @@ include "test.php";
       Mot de passe: <input type="text" name="password"><br><br>
      <button type="submit" name="button">Contactez-nous</button> <br>
 
-
    </fieldset>
    </form>
+
 
 
 
@@ -48,5 +49,7 @@ include "test.php";
 
 
 
+
     </body>
+
 </html>

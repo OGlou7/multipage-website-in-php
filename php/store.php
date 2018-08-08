@@ -32,10 +32,10 @@ include "form-logs.php";
   </head>
 
   <body>
-
+   
     <!-- header and navigation -->
     <?php
-      include ("header.php");
+      include("header.php");
     ?>
 
     <!-- end header and navigation -->
@@ -99,11 +99,11 @@ include "form-logs.php";
     </section>
 
 
-        <!-- footer -->
-        <?php
-        include ("footer.php");
-        ?>
-        <!-- end footer -->
+    <!-- footer -->
+    <?php
+      include ("footer.php");
+    ?>
+    <!-- end footer -->
 
 
     <!-- Bootstrap core JavaScript -->
@@ -114,7 +114,7 @@ include "form-logs.php";
 
   <!-- Script to highlight the active date in the hours list -->
   <script>
-    $('.list-hours li').eq(new Date().getDay()).addClass('today');
+    // $('.list-hours li').eq(new Date().getDay()).addClass('today');
   </script>
 
 </html>
