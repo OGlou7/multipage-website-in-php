@@ -1,3 +1,6 @@
+<?php
+include "form-logs.php";
+ ?>
 <!-- le contenu de la page Contact -->
 <!DOCTYPE html>
 <html lang="en">
@@ -21,98 +24,48 @@
     <!-- Custom styles for this template -->
     <link href="css/business-casual.min.css" rel="stylesheet">
     <link href="css/business-casual.css" rel="stylesheet">
+    <link rel="stylesheet" href="../scss/_store.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 
   </head>
 
   <body>
-
-    <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="img/abp-logo.png" alt="logo">
-    </h1>
-
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
-      <div class="container">
-        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-          <ul class="navbar-nav mx-auto">
-            <li class="nav-item active px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="index.php">Accueil
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="about.php">Qui sommes nous?</a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="products.php">Activités et Loisirs</a>
-            </li>
-            <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="store.php">Contact</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+   
+    <!-- header and navigation -->
+    <?php
+      include("header.php");
+    ?>
+    <!-- end header and navigation -->
 
     <section class="page-section cta">
       <div class="container">
         <div class="row">
           <div class="col-xl-9 mx-auto">
-            <div class="cta-inner text-center rounded">
-              <h2 class="section-heading mb-5">
-                <span class="section-heading-upper">Come On In</span>
-                <span class="section-heading-lower">We're Open</span>
-              </h2>
-              <ul class="list-unstyled list-hours mb-5 text-left mx-auto">
-                <li class="list-unstyled-item list-hours-item d-flex">
-                  Sunday
-                  <span class="ml-auto">Closed</span>
-                </li>
-                <li class="list-unstyled-item list-hours-item d-flex">
-                  Monday
-                  <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                </li>
-                <li class="list-unstyled-item list-hours-item d-flex">
-                  Tuesday
-                  <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                </li>
-                <li class="list-unstyled-item list-hours-item d-flex">
-                  Wednesday
-                  <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                </li>
-                <li class="list-unstyled-item list-hours-item d-flex">
-                  Thursday
-                  <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                </li>
-                <li class="list-unstyled-item list-hours-item d-flex">
-                  Friday
-                  <span class="ml-auto">7:00 AM to 8:00 PM</span>
-                </li>
-                <li class="list-unstyled-item list-hours-item d-flex">
-                  Saturday
-                  <span class="ml-auto">9:00 AM to 5:00 PM</span>
-                </li>
-              </ul>
-              <p class="address mb-5">
-                <em>
-                  <strong>1116 Orchard Street</strong>
-                  <br>
-                  Golden Valley, Minnesota
-                </em>
-              </p>
-              <p class="mb-0">
-                <small>
-                  <em>Call Anytime</em>
-                </small>
-                <br>
-                (317) 585-8468
-              </p>
+            <div class=" text-center rounded" id="forms">
+              <!-- FORMULAIRE  -->
+             <form class="" action="store.php" method="post">
+             <fieldset>
+               <legend>CONTACT</legend>
+               <input type="radio" name="gender" value="monsieur">Monsieur
+               <input type="radio" name="gender" value="madame">Madame<br><br>
+               Nom: <input id="textinput" name="nom" type="text" placeholder="nom" class="form-control input-md">
+               Prenom: <input id="textinput" name="prenom" type="text" placeholder="prenom" class="form-control input-md"><br><br>
+               Objet:<br><select name="objet" size="1">
+                 <option value="information">Information</option>
+                 <option value="benevolat">Benevolat</option>
+                 <option value="donation">Donation</option>
+                 <option value="autre">Autre</option>
+               </select><br><br>
+               Message:<textarea class="form-control" id="textarea" name="message" placeholder="message"></textarea><br><br>
+               Documents:<br><input id="filebutton" name="filedoc" class="input-file" type="file" size="32"><br><br>
+               Format de réponse souhaité <input type="radio" name="format" value="html">HTML
+               <input type="radio" name="format" value="texte">Texte<br><br>
+               E-mail: <input id="textinput" name="email" type="text" placeholder="adresse email" class="form-control input-md">
+               Mot de passe: <input id="passwordinput" name="password" type="password" placeholder="mot de passe" class="form-control input-md"><br><br>
+               <button id="singlebutton" name="button" class="btn-default" type="submit">Contactez-nous</button><br>
+             </fieldset>
+             </form>
             </div>
           </div>
         </div>
@@ -130,12 +83,13 @@
                   <span class="section-heading-upper">Nous avons besion de VOUS!</span>
                 </h2>
                 <p>Les activités mensuelles et les camps de vacances reposent sur l’aide bénévole des personnes responsables et des aidants mais également sur l'aide financielle. 
+
                 Ces jeunes et moins jeunes apportent leur aide aux personnes handicapées et leur permettent de vivre des moments de détente et de rencontres, ainsi que des activités qui sortent parfois de l’ordinaire !
                 Vous aussi vous pouvez participer aux activités de l’ABP en tant que bénévole et nous soutenir financiellement.
                 Pour soutenir nos activités ou pour une autre question nous concernant, contactez-nous en remplissant ce formulaire pour plus de details.
               </p>
-                
-                  
+
+
               </div>
             </div>
           </div>
@@ -143,11 +97,11 @@
       </div>
     </section>
 
-    <footer class="footer text-faded text-center py-5">
-      <div class="container">
-        <p class="m-0 small">Copyright &copy; 2018 - Fait par <a target="_blank" href="https://github.com/OGlou7">Marie Louise</a> & <a target="_blank" href="https://github.com/MarianeNiwe">Mariane</a> @ <a target="_blank" href="https://becode.org"> BeCode </a></p>
-      </div>
-    </footer>
+    <!-- footer -->
+    <?php
+      include ("footer.php");
+    ?>
+    <!-- end footer -->
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
@@ -157,7 +111,7 @@
 
   <!-- Script to highlight the active date in the hours list -->
   <script>
-    $('.list-hours li').eq(new Date().getDay()).addClass('today');
+    // $('.list-hours li').eq(new Date().getDay()).addClass('today');
   </script>
 
 </html>
