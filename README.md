@@ -72,7 +72,7 @@ We met up the 1st day for a half day to figure out how to work on this project a
 
 * August 1st 2018,the original website was desactivated and we couldn't get some information we needed for our new project.
 * Working Remotly
-* 
+*
 
 ##  New skills acquired from this project
 
@@ -88,4 +88,4 @@ We met up the 1st day for a half day to figure out how to work on this project a
 
 
 
-# Final resultat
+# Link to the final project
