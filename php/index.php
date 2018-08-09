@@ -6,7 +6,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+    <meta name="description" content="A belgian association of paralyzed ">
     <meta name="author" content="">
 
     <title>Association Belge des Paralysés</title>
@@ -23,6 +23,7 @@
     <link href="css/business-casual.css" rel="stylesheet">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  
 
   </head>
 
@@ -37,7 +38,7 @@
     <section class="page-section clearfix">
       <div class="container">
         <div class="intro">
-          <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/intro.jpg" style="width:700px; height:600px;" alt="">
+          <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="img/intro.jpg" style="width:400px; height:400px;" alt="">
           <div class="intro-text left-0 text-center bg-faded p-5 rounded">
             <h2 class="section-heading mb-4">
               <span class="section-heading-upper">Aide moi à agir seul!</span>
