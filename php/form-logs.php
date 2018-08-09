@@ -54,7 +54,7 @@ $mail = new PHPMailer;
       $mail->setFrom=$san_email;
     }
     if (!preg_match("/([w-]+@[w-]+.[w-]+)/",$email)) {
-      $errors['email'] = "Format de l'email Incorrect";
+      $errors['email'] = "Format de l'email Incorrect, veuillez indiquer votre email.";
     }
 
 
@@ -77,9 +77,9 @@ $mail = new PHPMailer;
     //Set an alternative reply-to address
     $mail->addReplyTo('becodetest@gmail.com', 'becodetest bxl');
     //Set who the message is to be sent to
-    $mail->addAddress('mlouiseogdoc@gmail.com', 'MLouise Ogdoc');
+    $mail->addAddress('becodetest@gmail.com', 'becodetest bxl');
     //Add CC
-    $mail->AddCC('somebody@example.com');
+    $mail->AddCC('becodetest@gmail.com');
     //Set the subject line
     $mail->Subject = 'PHPMailer GMail SMTP test';
 
@@ -106,7 +106,6 @@ $mail = new PHPMailer;
         }
       }
     }
-
 
     // MESSAGE HTML or TEXT
   $msg_txt = $message;
