@@ -20,8 +20,7 @@
     <link href="css/business-casual.min.css" rel="stylesheet">
     <link href="css/business-casual.css" rel="stylesheet">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon"> 
   </head>
   <body>
     <h1 class="site-heading text-center text-white d-none d-lg-block">
