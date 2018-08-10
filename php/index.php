@@ -23,7 +23,8 @@
     <link href="css/business-casual.css" rel="stylesheet">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-  
+    <!-- Manifest			 -->
+    <link rel="manifest" href="./manifest.json"/>
 
   </head>
 
@@ -76,6 +77,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src='./app.js'></script>
 
   </body>
 

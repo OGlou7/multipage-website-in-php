@@ -106,7 +106,6 @@ $mail = new PHPMailer;
         }
       }
     }
-
     // MESSAGE HTML or TEXT
   $msg_txt = $message;
   $msg_html = "<html><head></head><body>" .$message. "</body></html>";
@@ -124,28 +123,11 @@ $mail = new PHPMailer;
   file_put_contents("fichier.txt",$add, FILE_APPEND);
 
   //MENTION TO USER
-  $file = file_get_contents('./logs.txt', true);
-  $file = rtrim(trim($file), ',');
-  $file = '[' . $file . ']';
-  $logs = json_decode($file, true);
-  var_dump($logs);
-  foreach ($logs as $key => $value) {
-    echo '<pre>';
-    echo $logs[$key][date('l d/m/y')];
-    echo '<br>';
-    echo $logs[$key]['heure'];
-    echo '<br>';
-    echo $logs[$key]['nom'];
-    echo '<br>';
-    echo $logs[$key]['prenom'];
-    echo '<br>';
-    echo $logs[$key]['email'];
-    echo '<br>';
-    echo $logs[$key]['format'];
-    echo '</pre>';
-  }
-
-
+  $file = 'logs.txt';
+  $date = new DateTime();
+  $date = $date->format('Y-m-d H:i:s');
+  $texte = $date .$prenom. ' ' .$nom. 'EMAIL :  ' .$email. 'MESSAGE: '.$message.'IMAGE: ci-joint.';
+  file_put_contents($file, $texte, FILE_APPEND);
 }
 
 

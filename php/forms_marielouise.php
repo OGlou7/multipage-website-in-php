@@ -37,19 +37,6 @@ include "test.php";
    </fieldset>
    </form>
 
-
-
-
-      <!-- envoi d'une image via cette classe externe php upload -->
-
-
-     <!-- Validation :
-     limiter l'upload uniquement aux formats d'images les plus courants (jpg, jpeg, png, gif)
-     obliger le minimum pour pouvoir répondre : email + message -->
-
-
-
-
     </body>
 
 </html>

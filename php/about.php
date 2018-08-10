@@ -23,11 +23,12 @@
     <link href="css/business-casual.css" rel="stylesheet">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-
+    <!-- Manifest			 -->
+    <link rel="manifest" href="./manifest.json"/>
   </head>
 
   <body>
-  
+
     <!-- header and navigation -->
     <?php
       include("header.php");
@@ -44,8 +45,8 @@
                 <h2 class="section-heading mb-4">
                   <span class="section-heading-upper">Une initiative d’avant garde</span>
                 </h2>
-                <p>En 1938, il n’existait que très peu d’associations de patients et aucune regroupant des polios. La maladie sévissait à l’époque et laissait des séquelles musculaires qui condamnaient ceux qui en étaient atteints à une inactivité voire à une immobilité importante. 
-                Peu (ou pas) de moyens de transports adaptés, peu (ou pas) d’aides sociales disponibles, pas d’allocations, pas de kiné, peu (ou pas) d’appareillages d’aide à la marche, peu (ou pas) de connaissance de la «paralysie infantile », 
+                <p>En 1938, il n’existait que très peu d’associations de patients et aucune regroupant des polios. La maladie sévissait à l’époque et laissait des séquelles musculaires qui condamnaient ceux qui en étaient atteints à une inactivité voire à une immobilité importante.
+                Peu (ou pas) de moyens de transports adaptés, peu (ou pas) d’aides sociales disponibles, pas d’allocations, pas de kiné, peu (ou pas) d’appareillages d’aide à la marche, peu (ou pas) de connaissance de la «paralysie infantile »,
                 comme on disait à l’époque. Et pourtant, certains ont pris conscience de l’isolement des paralysés et imaginé de leur proposer d’établir des contacts entre eux, pour les en sortir.
                 L'ABP propose des activités socio-culturelles, récréatives ainsi que des activités de recherche et promotion de solutions visant à accroître l’autonomie des personnes handicapées en matière d’accessibilité des transports publics, de logement etc. par sa participation active dans différentes commissions compétentes en la matière.</p>
               </div>
@@ -64,6 +65,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src='./app.js'></script>
 
   </body>
 

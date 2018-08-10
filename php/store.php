@@ -28,7 +28,8 @@ include "form-logs.php";
     <link rel="stylesheet" href="../scss/_store.css">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.ico" type="image/x-icon">
-
+    <!-- Manifest			 -->
+    <link rel="manifest" href="./manifest.json"/>
   </head>
 
   <body>
@@ -109,6 +110,7 @@ include "form-logs.php";
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src='./app.js'></script>
 
   </body>
 
