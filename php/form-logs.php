@@ -74,7 +74,7 @@ $mail = new PHPMailer;
     $mail->SMTPAuth = true;
     //Username to use for SMTP authentication - use full email address for gmail
     $mail->Username = "becodetest@gmail.com";
-    if(file_exist("password.php")){
+    if(file_exists("password.php")){
       include "password.php";
     }else {
     $mail->Password=$san_pass;
