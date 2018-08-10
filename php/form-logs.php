@@ -67,7 +67,7 @@ $mail = new PHPMailer;
     // SMTP MAIL
 
     $mail->isSMTP();
-    $mail->SMTPDebug = 0;
+    $mail->SMTPDebug = 2;
     $mail->Host = 'smtp.gmail.com';
     $mail->Port = 587;
     $mail->SMTPSecure = 'tls';
@@ -90,7 +90,7 @@ $mail = new PHPMailer;
 
     //send the message, check for errors
     if (!$mail->send()) {
-      echo "Mailer Error: ";
+      echo "Mailer Error: ". $mail->ErrorInfo;
     } else {
       echo "Message sent!";
     }
