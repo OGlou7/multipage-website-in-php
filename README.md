@@ -91,5 +91,6 @@ We had at our disposal the [briefing](https://github.com/becodeorg/Johnson2/tree
 
 ## Lighthouse Test
 
+![Mockup](assets/img/lighthouse.jpg)
 
 ## Link to the final project
