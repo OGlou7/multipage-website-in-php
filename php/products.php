@@ -12,19 +12,19 @@
     <title>Association Belge des Paralysés</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom fonts for this template -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="css/business-casual.min.css" rel="stylesheet">
-    <link href="css/business-casual.css" rel="stylesheet">
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link href="../assets/css/business-casual.min.css" rel="stylesheet">
+    <link href="../assets/css/business-casual.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
     <!-- Manifest			 -->
-    <link rel="manifest" href="./manifest.json"/>
+    <link rel="manifest" href="../manifest.json"/>
   </head>
 
   <body>
@@ -45,7 +45,7 @@
               </h2>
             </div>
           </div>
-          <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/abantu.jpg" style="width:700px; height:400px;" alt="">
+          <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="../assets/img/abantu.jpg" style="width:700px; height:400px;" alt="">
           <div class="product-item-description d-flex mr-auto">
             <div class="bg-faded p-5 rounded">
               <p class="mb-0">Le projet Handivisit s’adresse à toutes les personnes qui ont des difficultés de mobilité et qui souhaitent se rendre dans les parcs, musées, villes. Le véhicule adapté,chauffeur formé à l’accompagnement des personnes à mobilité réduite, ainsi qu’une personne de l’ABP viennent vous chercher,vous accompagnent et vous ramène chez vous (dans les limites de la Région de Bruxelles-Capitale).
@@ -67,7 +67,7 @@
               </h2>
             </div>
           </div>
-          <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/vacance.jpg" alt="">
+          <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="../assets/img/vacance.jpg" alt="">
           <div class="product-item-description d-flex ml-auto">
             <div class="bg-faded p-5 rounded">
               <p class="mb-0">C’est en 1949, ABP a fondé les « camps de vacances pour handicapés » à la campagne ou à la mer.
@@ -90,7 +90,7 @@
               </h2>
             </div>
           </div>
-          <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="img/lourant.jpg" style="width:700px; height:500px;" alt="">
+          <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="../assets/img/lourant.jpg" style="width:700px; height:500px;" alt="">
           <div class="product-item-description d-flex mr-auto">
             <div class="bg-faded p-5 rounded">
               <p class="mb-0">Le projet AVIRA(dont nous sommes) consiste à partager des voitures adaptées pour les rendre disponibles au plus grand nombre. Cela permettra donc, d’une part à ceux qui n’ont pas de véhicule adapté
@@ -111,8 +111,8 @@
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src='./app.js'></script>
+    <script src="./assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src='../app.js'></script>
 
   </body>
 
