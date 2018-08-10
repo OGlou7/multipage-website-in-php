@@ -51,7 +51,7 @@ $mail = new PHPMailer;
     }
     else {
       $errors['email'] = "";
-      $mail->setFrom=$san_email;
+      $mail->setFrom( $san_email, '');
     }
     if (!preg_match("/([w-]+@[w-]+.[w-]+)/",$email)) {
       $errors['email'] = "Format de l'email Incorrect, veuillez indiquer votre email.";
@@ -72,12 +72,10 @@ $mail = new PHPMailer;
     //Username to use for SMTP authentication - use full email address for gmail
     $mail->Username = "becodetest@gmail.com";
     include "password.php";
-    //Set who the message is to be sent from
-    $mail->setFrom('becodetest@gmail.com', 'becodetest bxl');
     //Set an alternative reply-to address
     $mail->addReplyTo('becodetest@gmail.com', 'becodetest bxl');
     //Set who the message is to be sent to
-    $mail->addAddress('becodetest@gmail.com', 'becodetest bxl');
+    $mail->addAddress('mlouiseogdoc@gmail.com', '');
     //Add CC
     $mail->AddCC('becodetest@gmail.com');
     //Set the subject line
