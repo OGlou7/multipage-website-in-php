@@ -27,6 +27,9 @@ $mail = new PHPMailer;
     $email = $_POST['email'];
     $san_email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
+    $password = $_POST['password'];
+    $san_pass = filter_var($password, FILTER_SANITIZE_STRING);
+
     // VALIDATION
 
     if ($san_pren === false || $prenom == '') {
@@ -71,7 +74,11 @@ $mail = new PHPMailer;
     $mail->SMTPAuth = true;
     //Username to use for SMTP authentication - use full email address for gmail
     $mail->Username = "becodetest@gmail.com";
-    include "password.php";
+    if(file_exist("password.php")){
+      include "password.php";
+    }else {
+    $mail->Password=$san_pass;
+    }
     //Set an alternative reply-to address
     $mail->addReplyTo('becodetest@gmail.com', 'becodetest bxl');
     //Set who the message is to be sent to
