@@ -31,13 +31,13 @@ The objective of this challenge is to give us the opportunity to use our new kno
 And here come steps to follow:
 - Use of **DRY** method
 - Separate `php` from `html`
-- Use of `.gitignore` file 
+- Use of `.gitignore` file
 - Contact page has to contain a form that will:
     * Allow user to choose their gender
     * Ask for user's name, last name and email
     * Allow user to write a message
     * Allow user to upload a jpg, gif or png
-    * Allow user to choose between *html* and *txt* 
+    * Allow user to choose between *html* and *txt*
 - Uploading will be done with *php upload* class
 - Email will be managed with *phpmailer* or another similar class
 - Form will be sanitized, validated, executed and will provide feedback
@@ -73,11 +73,14 @@ We had at our disposal the [briefing](https://github.com/becodeorg/Johnson2/tree
 ## Problems encountered
 
 * August 1st 2018,the original website was desactivated and we couldn't get some information we needed for our new project.
+
 * Working remotly was not easy for us but we experience it and the next time we have to work on a project remotly we will have an strong experience.
-* We didn't have any strong background in php and working directly on a `real` project where you have to use php was really difficult and we had to search and search everything on internet and ask some of our collega and it tooks us time especially for contact form but was a good experience and we learn alot from this project.
+* We didn't have any strong background in php and working directly on a `real` project where you have to use php was difficult and we had to search and search everything on internet and ask some of our collega and it tooks us time especially for contact form but was a good experience and we learn alot from this project.
+
 
 
 ##  New skills acquired from this project
+
 * More Creative
 * Learn remote work and use all tools to make a good communication
 * How to use `include()`function in order to DRY and php classes
@@ -85,10 +88,9 @@ We had at our disposal the [briefing](https://github.com/becodeorg/Johnson2/tree
 * The use of `.gitignore` file
 * How to make your website compatible with the RGPD/Cookies.
 
+
 ## Lighthouse Test
 
 
-
 ## Link to the final project
-
 

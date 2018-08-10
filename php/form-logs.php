@@ -14,61 +14,51 @@ $mail = new PHPMailer;
     $prenom = $_POST['prenom'];
     $san_pren = filter_var($prenom, FILTER_SANITIZE_STRING);
 
-
     $nom = $_POST['nom'];
     $san_nom = filter_var($nom, FILTER_SANITIZE_STRING);
 
+    @$objet = $_POST['objet'];
 
     $message = $_POST['message'];
     $san_mess = filter_var($message, FILTER_SANITIZE_STRING);
 
+    @$format = $_POST['format'];
 
     $email = $_POST['email'];
     $san_email = filter_var($email, FILTER_SANITIZE_EMAIL);
 
-
     // VALIDATION
-    if ($san_pren === false) {
+
+    if ($san_pren === false || $prenom == '') {
         $errors['prenom'] =  "Veuillez indiquer votre prenom.";
-        }
-    if ($san_nom === false) {
+      }else {
+      $errors['prenom'] = "";
+      }
+    if ($san_nom === false || $nom == '') {
         $errors['nom'] =  "Veuillez indiquer votre nom.";
-        }
-    if ($san_mess === false) {
+      }else {
+      $errors['nom'] = "";
+      }
+    if ($san_mess === false || $message == '') {
       $errors['message'] =  "Veuillez indiquer votre message.";
     }
-    else {
+      else {
+      $errors['message'] = "";
       $mail->Body=$san_mess;
     }
-    if ($san_email === false) {
+    if ($san_email === false || $email == '') {
       $errors['email'] =  "Veuillez indiquer votre email.";
     }
     else {
+      $errors['email'] = "";
       $mail->setFrom=$san_email;
     }
+    if (!preg_match("/([w-]+@[w-]+.[w-]+)/",$email)) {
+      $errors['email'] = "Format de l'email Incorrect, veuillez indiquer votre email.";
+    }
+
 
       // EXECUTION
-      if (count($errors)> 0){
-      	echo 'Erreurs!';
-      	print_r($errors);
-      	exit;
-      }
-
-      // UPLOAD
-
-      $handle = new upload($_FILES['filedoc']);
-      if ($handle->uploaded) {
-        if ($handle->file_src_name_ext === 'png' || $handle->file_src_name_ext === 'jpg' ||$handle->file_src_name_ext === 'jpeg' || $handle->file_src_name_ext === 'gif') {
-          $handle->process('../images');
-          if ($handle->processed) {
-            echo 'image resized';
-            $handle->clean();
-          }
-          else {
-            echo 'error : ' . $handle->error;
-          }
-        }
-      }
 
 
     // SMTP MAIL
@@ -81,13 +71,15 @@ $mail = new PHPMailer;
     $mail->SMTPAuth = true;
     //Username to use for SMTP authentication - use full email address for gmail
     $mail->Username = "becodetest@gmail.com";
-    include '.gitignore';
+    include "password.php";
     //Set who the message is to be sent from
     $mail->setFrom('becodetest@gmail.com', 'becodetest bxl');
     //Set an alternative reply-to address
     $mail->addReplyTo('becodetest@gmail.com', 'becodetest bxl');
     //Set who the message is to be sent to
-    $mail->addAddress('mlouiseogdoc@gmail.com', 'MLouise Ogdoc');
+    $mail->addAddress('becodetest@gmail.com', 'becodetest bxl');
+    //Add CC
+    $mail->AddCC('becodetest@gmail.com');
     //Set the subject line
     $mail->Subject = 'PHPMailer GMail SMTP test';
 
@@ -98,10 +90,29 @@ $mail = new PHPMailer;
       echo "Message sent!";
     }
 
+
+    // UPLOAD
+
+    $handle = new upload($_FILES['image_field']);
+    if ($handle->uploaded) {
+      if ($handle->file_src_name_ext === 'png' || $handle->file_src_name_ext === 'jpg' ||$handle->file_src_name_ext === 'jpeg' || $handle->file_src_name_ext === 'gif') {
+        $handle->process('./images');
+        if ($handle->processed) {
+          echo 'image resized';
+          $handle->clean();
+        }
+        else {
+          echo 'error : ' . $handle->error;
+        }
+      }
+    }
+
+    // MESSAGE HTML or TEXT
+  $msg_txt = $message;
+  $msg_html = "<html><head></head><body>" .$message. "</body></html>";
+
   //>>>READ FICHIER.TXT <<<
   $monfichier = file_get_contents('fichier.txt');
-    // var_dump($monfichier);
-    echo $monfichier;
 
     // >>>>>>>>>ADD TEXT<<<<<<<<<<<<<
   $monfichier .= 'add test log atom';
@@ -112,5 +123,32 @@ $mail = new PHPMailer;
     // <<<<<<< ADD in fichier>>>>
   file_put_contents("fichier.txt",$add, FILE_APPEND);
 
+  //MENTION TO USER
+  $file = file_get_contents('./logs.txt', true);
+  $file = rtrim(trim($file), ',');
+  $file = '[' . $file . ']';
+  $logs = json_decode($file, true);
+  var_dump($logs);
+  foreach ($logs as $key => $value) {
+    echo '<pre>';
+    echo $logs[$key][date('l d/m/y')];
+    echo '<br>';
+    echo $logs[$key]['heure'];
+    echo '<br>';
+    echo $logs[$key]['nom'];
+    echo '<br>';
+    echo $logs[$key]['prenom'];
+    echo '<br>';
+    echo $logs[$key]['email'];
+    echo '<br>';
+    echo $logs[$key]['format'];
+    echo '</pre>';
+  }
+
+
 }
- ?>
+
+
+
+
+?>

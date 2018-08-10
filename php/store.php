@@ -32,11 +32,12 @@ include "form-logs.php";
   </head>
 
   <body>
-   
+
     <!-- header and navigation -->
     <?php
       include("header.php");
     ?>
+
     <!-- end header and navigation -->
 
     <section class="page-section cta">
@@ -45,26 +46,26 @@ include "form-logs.php";
           <div class="col-xl-9 mx-auto">
             <div class=" text-center rounded" id="forms">
               <!-- FORMULAIRE  -->
-             <form class="" action="store.php" method="post">
+             <form class="" action="store.php" method="post" enctype="multipart/form-data">
              <fieldset>
-               <legend>CONTACT</legend>
-               <input type="radio" name="gender" value="monsieur">Monsieur
-               <input type="radio" name="gender" value="madame">Madame<br><br>
-               Nom: <input id="textinput" name="nom" type="text" placeholder="nom" class="form-control input-md">
-               Prenom: <input id="textinput" name="prenom" type="text" placeholder="prenom" class="form-control input-md"><br><br>
-               Objet:<br><select name="objet" size="1">
-                 <option value="information">Information</option>
-                 <option value="benevolat">Benevolat</option>
-                 <option value="donation">Donation</option>
-                 <option value="autre">Autre</option>
+               <legend><strong>CONTACT</strong></legend>
+               <input type="radio" name="gender" value="monsieur"><strong>Monsieur</strong>
+               <input type="radio" name="gender" value="madame"><strong>Madame</strong><br><br>
+               <strong>Nom: </strong><?php if(isset($_POST['button'])){echo $errors['nom'];} ?><br><input id="textinput" name="nom" type="text" placeholder="nom" class="form-control input-md"><br>
+               <strong>Prenom: </strong> <?php if(isset($_POST['button'])){echo $errors['prenom'];} ?><br><input id="textinput" name="prenom" type="text" placeholder="prenom" class="form-control input-md"><br><br>
+               <strong>Objet:</strong><br><select name="objet" size="1">
+                 <option value="information"><strong>Information</strong></option>
+                 <option value="benevolat"><strong>Benevolat</strong></option>
+                 <option value="donation"><strong>Donation</strong></option>
+                 <option value="autre"><strong>Autre</strong></option>
                </select><br><br>
-               Message:<textarea class="form-control" id="textarea" name="message" placeholder="message"></textarea><br><br>
-               Documents:<br><input id="filebutton" name="filedoc" class="input-file" type="file" size="32"><br><br>
-               Format de réponse souhaité <input type="radio" name="format" value="html">HTML
-               <input type="radio" name="format" value="texte">Texte<br><br>
-               E-mail: <input id="textinput" name="email" type="text" placeholder="adresse email" class="form-control input-md">
-               Mot de passe: <input id="passwordinput" name="password" type="password" placeholder="mot de passe" class="form-control input-md"><br><br>
-               <button id="singlebutton" name="button" class="btn-default" type="submit">Contactez-nous</button><br>
+               <strong>Message: </strong><?php if(isset($_POST['button'])){echo $errors['message'];} ?><br><textarea class="form-control" id="textarea" name="message" placeholder="message"></textarea><br><br>
+               <strong>Documents:</strong><br><input id="filebutton" name="image_field" class="input-file" type="file" size="32"><br><br>
+               <strong>Format de réponse souhaité </strong><input type="radio" name="format" value="html"><strong>HTML</strong>
+               <input type="radio" name="format" value="texte"><strong>Texte</strong><br><br>
+               <strong>E-mail: </strong><?php if(isset($_POST['button'])){echo $errors['email'];} ?><br><input id="textinput" name="email" type="text" placeholder="adresse email" class="form-control input-md"><br>
+               <strong>Mot de passe: </strong><input id="passwordinput" name="password" type="password" placeholder="mot de passe" class="form-control input-md"><br><br>
+               <button id="singlebutton" name="button" class="btn-default" type="submit"><strong>Contactez-nous</strong></button><br>
              </fieldset>
              </form>
             </div>
@@ -83,13 +84,12 @@ include "form-logs.php";
                 <h2 class="section-heading mb-4">
                   <span class="section-heading-upper">Nous avons besion de VOUS!</span>
                 </h2>
-                <p>Les activités mensuelles et les camps de vacances reposent sur l’aide bénévole des personnes responsables et des aidants mais également sur l'aide financielle. 
+                <p>Les activités mensuelles et les camps de vacances reposent sur l’aide bénévole des personnes responsables et des aidants mais également sur l'aide financielle.
 
                 Ces jeunes et moins jeunes apportent leur aide aux personnes handicapées et leur permettent de vivre des moments de détente et de rencontres, ainsi que des activités qui sortent parfois de l’ordinaire !
                 Vous aussi vous pouvez participer aux activités de l’ABP en tant que bénévole et nous soutenir financiellement.
                 Pour soutenir nos activités ou pour une autre question nous concernant, contactez-nous en remplissant ce formulaire pour plus de details.
               </p>
-
 
               </div>
             </div>
@@ -98,11 +98,13 @@ include "form-logs.php";
       </div>
     </section>
 
+
     <!-- footer -->
     <?php
       include ("footer.php");
     ?>
     <!-- end footer -->
+
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>
