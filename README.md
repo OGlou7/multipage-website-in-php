@@ -1,5 +1,3 @@
-![working](http://www.usaclimi.it/Uploads/Documenti/work-in-progress.jpg)
-
 # Fil Rouge "Multipage Website"
 
 - **Repository**: `Multipage-Website-in-php`
@@ -64,15 +62,22 @@ We had at our disposal the [briefing](https://github.com/becodeorg/Johnson2/tree
 ### UML flowchart for contact form
 ![Form](php/img/form(1)-Page-1.png)
 
-
 ## Workflow
-We met up the 1st day for a half day to figure out how to work on this project and discussed about the objectives and various tasks we were going to do to accomplish this project. Then we decided to start and communicate everything via Ryver.
+
+* We met up the 1st day for a half day to figure out how to work on this project and discussed about the objectives and various tasks we were going to do to accomplish this project. We started with a brainstorming to better understand the over view of the project.
+* We then created a mockup to visualize the project,choose a css bootstrap and finally draw an uml for our contact form scripts at this stage we had almost a good vision on what we were supposed to do for the whole project.
+*  We created a Github repository, made a kanban for tasks,created branches(each created her own branch to work together).
+* In order to work efficiently remotely, we used first create a kanban to have all tasks to be done and follow the progress of the project and created a team channel on Ryver.
+* When the project was accomplished, we deployed it on Heroku.
 
 ## Problems encountered
 
 * August 1st 2018,the original website was desactivated and we couldn't get some information we needed for our new project.
-* Working Remotly
-*
+
+* Working remotly was not easy for us but we experience it and the next time we have to work on a project remotly we will have an strong experience.
+* We didn't have any strong background in php and working directly on a `real` project where you have to use php was difficult and we had to search and search everything on internet and ask some of our collega and it tooks us time especially for contact form but was a good experience and we learn alot from this project.
+
+
 
 ##  New skills acquired from this project
 
@@ -87,5 +92,5 @@ We met up the 1st day for a half day to figure out how to work on this project a
 ## Lighthouse Test
 
 
+## Link to the final project
 
-# Link to the final project
