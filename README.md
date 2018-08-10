@@ -91,6 +91,8 @@ We had at our disposal the [briefing](https://github.com/becodeorg/Johnson2/tree
 
 ## Lighthouse Test
 
-![Mockup](assets/img/lighthouse.jpg)
+![Mockup](assets/img/lighthouse.JPG)
 
 ## Link to the final project
+
+https://mighty-shore-25354.herokuapp.com/
