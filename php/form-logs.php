@@ -126,7 +126,7 @@ $mail = new PHPMailer;
   $file = 'logs.txt';
   $date = new DateTime();
   $date = $date->format('Y-m-d H:i:s');
-  $texte = $date.' ' .$prenom. ' ' .$nom. 'Votre email :  ' .$email. 'Message : '.$message.'Image: ci-joint.';
+  $texte = $date .$prenom. ' ' .$nom. 'EMAIL :  ' .$email. 'MESSAGE: '.$message.'IMAGE: ci-joint.';
   file_put_contents($file, $texte, FILE_APPEND);
 }
 
